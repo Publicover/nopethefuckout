@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location: MyString
+  date_arriving: 2016-11-13
+  date_leaving: 2016-11-13
+  reason_to_leave: MyString
+
+two:
+  name: MyString
+  location: MyString
+  date_arriving: 2016-11-13
+  date_leaving: 2016-11-13
+  reason_to_leave: MyString

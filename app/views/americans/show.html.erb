@@ -1,0 +1,34 @@
+<h1>Americans#show</h1>
+<p>Find me in app/views/americans/show.html.erb</p>
+
+<h1>American ID# <%= "#{@american.id}" %></h1>
+
+<p>
+  <strong>Name</strong><br>
+  <%= @american.name %>
+</p>
+
+<p>
+  <strong>Location</strong><br>
+  <%= @american.location %>
+</p>
+
+<p>
+  <strong>Date Arriving</strong>
+  <%= @american.date_arriving %>
+</p>
+
+<p>
+  <strong>Date Leaving</strong>
+  <%= @american.date_leaving %>
+</p>
+
+<p>
+  <strong>Reason to Leave</strong>
+  <%= @american.reason_to_leave %>
+</p>
+
+<br>
+<%= link_to "HOME INDEX", americans_path %> <br>
+<%= link_to "NEW RESERVATION", new_american_path %> <br>
+<%= link_to "FRONT PAGE DASHBOARD", root_path %>

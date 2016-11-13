@@ -1,0 +1,43 @@
+<%= form_for @american do |f| %>
+
+  <% if @american.errors.any? %>
+
+    <div id="error_explanation">
+      <p>
+        <%= pluralize(@american.errors.count, "error") %> prohibited
+        this article from being saved:
+      </p>
+      <% @american.errors.full_messages.each do |msg| %>
+        <li><center><%= msg %></li>
+      <% end %>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label "Name" %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label "Location" %>
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <%= f.label "Date Arriving" %>
+    <%= f.date_field :date_arriving %>
+  </p>
+
+  <p>
+    <%= f.label "Date Leaving" %>
+    <%= f.date_field :date_leaving %>
+  </p>
+
+  <p>
+    <%= f.label "Reason to Leave" %>
+    <%= f.text_field :reason_to_leave %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>

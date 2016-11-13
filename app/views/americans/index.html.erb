@@ -1,0 +1,27 @@
+<h1>Americans#index</h1>
+<p>Find me in app/views/americans/index.html.erb</p>
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Location </th>
+    <th> Date Arriving </th>
+    <th> Date Leaving </th>
+  </tr>
+
+  <% @americans.each do |american| %>
+    <tr>
+      <td><%= american.name %></td>
+      <td><%= american.location %></td>
+      <td><%= american.date_arriving %></td>
+      <td><%= american.date_leaving %></td>
+      <td><%= american.reason_to_leave %></td>
+      <td><%= link_to 'SHOW', american_path(american) %></td>
+      <td><%= link_to 'EDIT', edit_american_path(american) %></td>
+      <td><%= link_to 'DESTROY', american_path(american),
+              method: :delete,
+              data: { confirm: 'OK, well, just be careful.' } %></td>
+    </tr>
+  </tr>
+<% end %>
+</table>
